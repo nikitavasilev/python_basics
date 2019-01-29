@@ -26,8 +26,19 @@ while i < len(alphabet):
 for elt in alphabet: # same as the while loop before, but much shorter
     print(elt)
 
-for elt in enumerate(alphabet):
+for elt in enumerate(alphabet): # once a tuple is created, you cannot change it
     print(elt)
 
 for i, elt in enumerate(alphabet):
     print('In index {}, you can find {}.'.format(i, elt))
+
+empty_tuple = () # list = [], and tuple = ()
+
+not_empty_tuple = (1,) # even with only one element, don't forget the coma, it's mandatory when you create a tuple
+
+def decompose(integer, divided_by):
+    entire_part = integer // divided_by
+    rest = integer % divided_by
+    return entire_part, rest
+
+print(decompose(20, 3)) # we can return more than one value, in tuples!
